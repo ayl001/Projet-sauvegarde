@@ -23,7 +23,7 @@ PS3="Choisissez une action : "
   				read -p "Emplacement : " emplacement 
   			done ;;
    		
-   	4)  if [ -d  "$emplacement" ] ; then bash ./sauver.sh $emplacement ; fi;; 
+   	4)  if [ -d  "$emplacement" ] ; then bash ./sauver.sh ${emplacement}_"$(date "%y_%m_%d_%H_%M") ; fi;; 
 # Notamment ici on appelle un autre script. 
    		
    	5) echo cette fonctionnalité n'est pas encore implémentée ; read -p "<continuer>" ;;
