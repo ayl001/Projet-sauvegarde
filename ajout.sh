@@ -7,7 +7,7 @@ ajout_ligne() {
     echo "Entrez le chemin du répertoire à ajouter ou x pour sortir"
     read $chemin_repertoire  
     if
-    [ -d $chemin_repertoire ]
+    [ -d $chemin_repertoire ]; then
   
         echo "/$chemin_repertoire/d" >> "$folder"
         echo "Répertoire ajouté avec succès."
