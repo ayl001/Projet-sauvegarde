@@ -11,7 +11,7 @@ PS3="Choisissez une action : "
    do
    	case $REPLY in
    	
-  		1) bash ./ajouter.sh 
+  		1) bash ./ajout.sh 
   		;;
    	
   		2) bash ./suppression-v1.sh
@@ -20,13 +20,14 @@ PS3="Choisissez une action : "
   		3) while
   		 !	[ -d "$emplacement" ]
   		 	do
-  				read -p "Emplacement : " emplacement # à compléter
+  				read -p "Emplacement : " emplacement 
   			done ;;
    		
    	4)  if [ -d  "$emplacement" ] ; then bash ./sauver.sh $emplacement ; fi;; 
 # Notamment ici on appelle un autre script. 
    		
-   	5) chronophage.sh ;;
+   	5) echo cette fonctionnalité n'est pas encore implémentée ; read -p "<continuer>" ;;
+    chronophage.sh ;;
    		
    	6) echo "Belle journée !" ; exit ;;
    		
