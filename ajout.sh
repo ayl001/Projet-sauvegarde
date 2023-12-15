@@ -4,7 +4,7 @@ sortie="x"
 while true; do
     ajout_ligne() {
 
-        read -p "Entrez le chemin du répertoire à ajouter ou 'x' pour sortir : "      
+        read -p "Entrez le chemin du répertoire à ajouter ou 'x' pour sortir : "  chemin_repertoire
 
         if [ "$chemin_repertoire" = "x" ]; then
             break
