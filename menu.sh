@@ -11,29 +11,28 @@ PS3="Choisissez une action : "
    do
    	case $REPLY in
    	
-  		1) bash ./ajout.sh 
+  		1) bash ./ajout.sh clear
   		;;
    	
-  		2) bash ./suppression-v1.sh
+  		2) bash ./suppression-v1.sh ; clear
   		;;
    	
-  		3) while
-  		 !	[ -d "$emplacement" ]
-  		 	do
-  				read -p "Emplacement : " emplacement 
-  			done ;;
+ 		3) 
+  				read -p "Emplacement de sauvegarde : " emplacement ; clear
+  				 ;;
    		
-   	4)  bash ./sauver.sh ${emplacement}_"$(date "%y_%m_%d_%H_%M") ; fi;; 
+   	4)  bash ./sauver.sh ${emplacement}_"$(date "+%y_%m_%d_%H_%M") ; clear
+   	;; 
 # Notamment ici on appelle un autre script. 
    		
-   	5) echo cette fonctionnalité n'est pas encore implémentée ; read -p "<continuer>" ;;
-    chronophage.sh ;;
-   		
-   	6) echo "Belle journée !" ; exit ;;
-   		
-   	*) echo 1>&2 "Ce choix ne vous est pas proposé" ;;
-	esac
+   	5) 
+   		echo cette fonctionnalité n'est pas encore implémentée" ; read -p "<continuer>" 
+   	;;	
+   	6) 
+   		clear ; echo "Belle journée"
+   		exit 0 
+   		;;
+   	*) read -p "Ce choix n'est pas permis, tapez <return>"; clear
+   	;;
+esac
 done
-   	
-
-Quitter.
