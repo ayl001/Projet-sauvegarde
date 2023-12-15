@@ -11,22 +11,29 @@ PS3="Choisissez une action : "
    do
    	case $REPLY in
    	
-  		1) bash ./ajout.sh ; clear
+  		1) bash ./ajout.sh ; read -p "..." ;  clear
   		;;
    	
   		2) bash ./suppression-v1.sh ; clear
   		;;
    	
  		3) 
-  				read -p "Emplacement de sauvegarde : " emplacement ; clear
+  				read -p "Emplacement de sauvegarde : " emplacement
+  				clear
+  				continue
   				 ;;
    		
-   	4)  bash ./sauver.sh ${emplacement}_"$(date "+%y_%m_%d_%H_%M") ; clear
+   	4)  
+   	EDS=${emplacement}_$(date "+%Y_%m_%d_%H_%M") 
+   	echo $EDS
+   	bash ./sauver.sh $EDS ; read -p "..." ; clear
    	;; 
 # Notamment ici on appelle un autre script. 
    		
    	5) 
-   		echo cette fonctionnalité n'est pas encore implémentée" ; read -p "<continuer>" 
+   		echo "cette fonctionnalité n'est pas encore implémentée" ; 
+   		read -p "<continuer>"
+   		clear 
    	;;	
    	6) 
    		clear ; echo "Belle journée"
