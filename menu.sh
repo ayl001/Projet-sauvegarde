@@ -11,7 +11,7 @@ PS3="Choisissez une action : "
    do
    	case $REPLY in
    	
-  		1) bash ./ajout.sh clear
+  		1) bash ./ajout.sh ; clear
   		;;
    	
   		2) bash ./suppression-v1.sh ; clear
