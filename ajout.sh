@@ -1,7 +1,7 @@
 #!/bin/bash
 folder=liste-sauvegarde
 sortie=x
-while true:
+while true
 do
 ajout_ligne() {
     echo "Entrez le chemin du répertoire à ajouter ou x pour sortir"
