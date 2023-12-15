@@ -1,5 +1,5 @@
 #!/bin/bash
-folder=liste-sauvegarde.txt
+folder=liste-sauvegarde
 while
 read -p "Veuillez entrer le chemin du fichier que vous souhaitez sauvegarder : " folder
 ajout_ligne() {
