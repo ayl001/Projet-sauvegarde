@@ -13,7 +13,7 @@ ajout_ligne() {
         echo "Répertoire ajouté avec succès."
        else
         echo "Le répertoire n'est pas dans la liste."
-       elif
+       
       [ $sortie -eq x ]; then
         break
     fi
