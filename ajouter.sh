@@ -1,4 +1,5 @@
 #!/bin/bash
+Sauvegarde=$1
 for repertoire in $( cat "/home/liste-sauvegarde" ) 
 do
     if [ -e $repertoire ]; then 
