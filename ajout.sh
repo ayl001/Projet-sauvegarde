@@ -38,3 +38,4 @@ while true; do
             ;;
     esac
 done
+#Par contre je ne sais pas comment revenir sur ton cript @YVES après avoir quitté le mien
