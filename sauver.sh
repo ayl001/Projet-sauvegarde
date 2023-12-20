@@ -1,5 +1,7 @@
 #!/bin/bash
-Sauvegarde=$1_$(date "+%Y_%m_%d_%H_%M") 
+Prefixe=$1
+Sauvegarde=${Prefixe}_$(date "+%Y_%m_%d_%H_%M") 
+echo $Sauvegarde
 #déclaration de la variable avec la date
 mkdir -p $Sauvegarde && echo "création OK"
 #création du dossier si celui ci n'existe pas déjà
