@@ -6,7 +6,7 @@ mkdir -p $Sauvegarde
 for repertoire in $( cat liste-sauvegarde ) #
 do
     if [ -e $repertoire ]; then 
-            cp -R $repertoire $Sauvegarde && echo "ça marche"
+            cp -R $repertoire $Sauvegarde && echo "et c'est ti par batard"
     fi
 done 
 
