@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# Ajout des variables de couleur
+vert='\e[0;32m'
+rouge='\e[0;31m'
+# Couleur par défaut du terminal
+neutre='\e[0;m'
+
 # Fichier contenant la liste des répertoires
 fichier_liste="liste-sauvegarde"
 
@@ -10,21 +16,20 @@ ajouter_repertoire() {
 
 # Vérifie si le répertoire existe
     if [ -d "$nouveau_repertoire" ]; then
-        # Ajoute le chemin du nouveau répertoire à la liste
+# Ajoute le chemin du nouveau répertoire à la liste
         echo "$nouveau_repertoire" >> "$fichier_liste"
-        echo "Chemin ajouté avec succès."
+        echo -e "$vert Chemin ajouté avec succès. $neutre"
     else
-        echo "Le répertoire $nouveau_repertoire n'existe pas."
+        echo -e "$rouge Le répertoire $nouveau_repertoire n'existe pas. $neutre"
     fi
 }
 
 # Menu simple
 while true; do
     echo "1. Ajouter un nouveau répertoire"
-    echo "2. Quitter"    
+    echo "2. Quitter" 
 
     read -p "Choisissez une option (1 ou 2) : " choix
-
     case $choix in
         1)
             ajouter_repertoire
@@ -34,8 +39,7 @@ while true; do
             exit 0
             ;;
         *)
-            echo "Option invalide. Veuillez choisir 1 ou 2."
+            echo -e "$rouge Option invalide. $neutre Veuillez choisir 1 ou 2."
             ;;
     esac
 done
-#Par contre je ne sais pas comment revenir sur ton cript @YVES après avoir quitté le mien
